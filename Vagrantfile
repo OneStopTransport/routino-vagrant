@@ -39,8 +39,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-  config.vm.synced_folder "routino", "/vagrant/routino-2.7.3"
-  config.vm.synced_folder "routino-web", "/var/www/html/routino"
+  config.vm.synced_folder "routino-setup", "/home/vagrant/routino-setup"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -103,7 +102,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #   chef.json = { :mysql_password => "foo" }
   # end
   
-  config.vm.provision "shell", path: "install.sh"
+  config.vm.provision "shell", path: "routino-setup/install.sh"
 
   # Enable provisioning with chef server, specifying the chef server URL,
   # and the path to the validation key (relative to this Vagrantfile).
