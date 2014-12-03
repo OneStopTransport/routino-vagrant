@@ -9,4 +9,4 @@ bin/*
 .kitchen.local.yml
 
 # Project shared folders
-routino-web/*
+routino/*
