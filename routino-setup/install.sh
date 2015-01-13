@@ -35,6 +35,6 @@ sed -r -i -e 's/#<Directory \/srv\/>/ \
 <\/Directory> \
 \
 #<Directory \/srv\/>/g' /etc/apache2/apache2.conf
-chown -R www-data:www-data /var/
+chown -R www-data:www-data /var/www/
 a2enmod cgi && service apache2 restart
 echo "All set, open your browser with the URL http://localhost:8080/routino/router.html and have fun! :)"
